@@ -21,4 +21,4 @@ jobs:
           echo `hostname`
           echo "hello world"
       - name: run Python application
-        run: python hw.py
+        run: python app.py

@@ -17,6 +17,6 @@ jobs:
     steps: 
       - uses: actions/checkout@v3
       - name: Hello World
-        run: 
+        run: |
           echo `hostname`
           echo "hello world"

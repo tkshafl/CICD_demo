@@ -23,5 +23,5 @@ jobs:
           APP_SSH_SECRET_KEY:  ${{ secrets.APP_SSH_SECRET_KEY }}
         run: |
           mkdir -p /tmp/keys && chmod 700 /tmp/keys
-          echo "$APP_SSH_SECRET_KEY"> /tmp/keys/private_key && chmod 600 /tmp/keys/private_key
-          ssh -o StrictHostKeyChecking=no -i /tmp/keys/private_key $APP_SSH_USER@$APP_HOST ' exho `hostname`'
+          echo "$APP_SSH_SECRET_KEY" > /tmp/keys/private_key && chmod 600 /tmp/keys/private_key
+          ssh -o StrictHostKeyChecking=no -i /tmp/keys/private_key ${APP_SSH_USER}@${APP_HOST} ' echo `hostname` '
